@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVEST AI - Waitlist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">UNIVEST AI</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Bridging Student Innovators with Investors using AI</h1>
+            <p>
+                UNIVEST AI matches student entrepreneurs with the right investors based on business interests. 
+                Get AI-powered pitch reviews, deck ratings, and connect with a community of innovators.
+            </p>
+            <a href="#register" class="cta-button">Join the Waitlist</a>
+        </div>
+    </section>
+
+    <section id="register" class="register-section">
+        <h2>Join the Future of Student Innovation</h2>
+        <p>Be the first to know when we launch.</p>
+        
+        <div class="form-container">
+            <form id="waitlistForm">
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@university.edu" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a secure password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="userType">I am a...</label>
+                    <select id="userType">
+                        <option value="Student">Student Innovator</option>
+                        <option value="Investor">Investor</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Register for Early Access</button>
+                <p id="formMessage" class="message"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Connect with Us</h3>
+            <div class="social-links">
+                <a href="#" target="_blank">WhatsApp Channel</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">X (Twitter)</a>
+            </div>
+            <p>
+                &copy; 2025 UNIVEST AI. All rights reserved. 
+                <span style="display: block; font-size: 0.9em; margin-top: 5px; color: #94a3b8;">
+                Designed & Developed by <strong>Alao Majeed</strong>
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
