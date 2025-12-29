@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Modern, clean font */
-    scroll-behavior: smooth; /* Enables smooth scrolling when clicking nav links */
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     padding: 1rem 5%;
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed; /* Keeps nav stuck to top */
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -30,7 +30,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb; /* AI Blue */
+    color: #2563eb;
 }
 
 .nav-links {
@@ -50,93 +50,231 @@ body {
     color: #2563eb;
 }
 
-/* HERO SECTION */
+/* HAMBURGER MENU ICON (Hidden by default on PC) */
+.menu-icon {
+    display: none; /* Only shows on mobile */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* HERO SECTION - REFINED */
 .hero-section {
-    height: 100vh; /* Full screen height */
+    min-height: 90vh; /* Changed from 100vh to allow scrolling to next section */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 100%);
-    padding: 0 20px;
-    padding-top: 60px; /* Offset for fixed navbar */
+    padding: 120px 20px 60px 20px; /* More top padding for navbar */
+}
+
+/* The Box that constrains the H1 width */
+.hero-text-box {
+    max-width: 800px; /* Keeps text from stretching too wide on PC */
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem; /* Bigger, bolder font */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
     color: #1e293b;
+    letter-spacing: -1px; /* Tighter modern look */
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
+    margin-bottom: 2.5rem;
+    color: #64748b;
+    max-width: 600px; /* Keeps the paragraph readable */
     margin-left: auto;
     margin-right: auto;
-    color: #64748b;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 14px 35px;
     background-color: #2563eb;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px; /* Fully rounded button for modern look */
     font-weight: 600;
-    transition: background 0.3s;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background 0.3s;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
 }
 
 .cta-button:hover {
     background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* NEW INFO SECTION (The Client Write-Up) */
+.info-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    gap: 40px;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.info-card p {
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+/* Make the second card pop a bit more */
+.highlight-card {
+    border-left: 4px solid #2563eb;
+    padding-left: 20px;
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+    padding: 100px 20px;
+    background-color: #f8fafc; /* Light grey background to contrast with white cards */
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* The Grid Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-responsive columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Cards */
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px; /* Smooth rounded corners */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Text aligned left looks more professional for cards */
+    border: 1px solid #e2e8f0;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Moves up slightly on hover */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb; /* Blue border highlights on hover */
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: #eff6ff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* REGISTER SECTION */
 .register-section {
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: #f8fafc; /* Slightly different grey */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.register-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
 .form-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 600;
     font-size: 0.9rem;
+    color: #334155;
 }
 
 .input-group input, .input-group select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #cbd5e1;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background-color: #2563eb;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
@@ -151,23 +289,67 @@ body {
 
 /* FOOTER */
 footer {
-    background-color: #1e293b;
+    background-color: #0f172a; /* Darker footer */
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .social-links {
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .social-links a {
-    color: #94a3b8;
+    color: #cbd5e1;
     margin: 0 15px;
     text-decoration: none;
     font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
     color: white;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    
+    /* Show Hamburger */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide Nav Links by default */
+    .nav-links {
+        display: none; /* Hidden! */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Push below navbar */
+        left: 0;
+        background-color: #ffffff;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    /* This class is added by JS to show the menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Stack the Info Section columns */
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Adjust H1 size for mobile */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }
